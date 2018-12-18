@@ -23,10 +23,10 @@ void UARTSetup(void)
 
 void publish(void)
 {
-    char pub[] = {"#backupSensor 0\n"}; // replace the 0
-    pub[14] = distance; // char just stores int ASCII value
+    char pub[] = {"#home/backupSensor 0\n"}; // replace the 0
+    pub[19] = distance; // char just stores int ASCII value
     int i;
-    for(i = 0; i<16; i++)
+    for(i = 0; i<22; i++)
     {
         while(!(IFG2&UCA0TXIFG));
         UCA0TXBUF = pub[i];

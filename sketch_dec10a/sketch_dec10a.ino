@@ -31,7 +31,7 @@ char tempmsg[50];
 int value = 0;
 void setup() {
   pinMode(BUILTIN_LED, OUTPUT);     // Initialize the BUILTIN_LED pin as an output
-  Serial.begin(115200);
+  Serial.begin(9600);
   setup_wifi();
   client.setServer(mqtt_server, mqttPort);
   client.setCallback(callback);
